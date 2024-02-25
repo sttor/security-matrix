@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,7 +37,10 @@
       font-size: 0.95em;
       color: #0e26b1;
       border-bottom: 2px solid #111111;
-
+    }
+    .purpose {
+        color: black;
+        font-weight: 600;
     }
   </style>
      <style>
@@ -251,14 +254,19 @@
 buttonData:
   button1:
     id: INV-001
-    title: Manage Inventory
+    title: List IP addresses.
     description: |-
-        You should manage the inventory assets. The inventory can have this and that and ok ok
-        bla bla bla
-    depends: INV-005
+        This control involves compiling a comprehensive list of all IP addresses that are associated with
+        your organization's network infrastructure. This includes both internal and external
+        IP addresses used for various purposes such as servers, devices, and network endpoints.
+
+    purpose: |-
+        Maintaining an up-to-date inventory of IP addresses helps organizations understand the scope of their
+        network infrastructure, identify potential security risks or vulnerabilities,
+        and facilitate effective network management and monitoring.
+    depends:
     tags:
-      - tag1
-      - tag2
+      - network
   button2:
     id: INV-002
     title: Update Inventory
@@ -298,6 +306,7 @@ buttonData:
             var popoverContent = '<div>' +
                  '<h5 class="popover-title">' + data.id + ' ' + data.title + '</h5>' +
                 '<p class="popover-content">' + data.description + '</p>' +
+                '<p class="popover-content"><span class="purpose">Purpose:</span><br/>' + data.purpose + '</p>' +
                 (data.code ? '<pre class="code">' + data.code + '</pre>' : '') +
                 (data.depends ? '<p class="popover-content"><strong>Related:</strong> <span class="depends-on">' + data.depends + '</span></p>' : '') +
                 '<p class="popover-content">' +

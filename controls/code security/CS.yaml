@@ -1,0 +1,77 @@
+- control: CS-001
+  description: Check 2FA on Github.
+  purpose: This control involves checking the availability of two-factor authentication (2FA) on the GitHub repository. Enabling 2FA adds an additional layer of security to user accounts and helps prevent unauthorized access and account compromise.
+  categories:
+    - Code Security
+    - Authentication
+  recommendations:
+    - Enable two-factor authentication (2FA) on the GitHub repository to enhance account security.
+    - Encourage all users to enable 2FA for their GitHub accounts to protect against unauthorized access.
+  incidents:
+    - description: Unauthorized access to GitHub repositories due to lack of two-factor authentication.
+      reference: https://example.com/unauthorized-access-github
+
+- control: CS-002
+  description: Check Branch Protection configuration on Github.
+  purpose: This control involves checking the configuration of branch protection on the GitHub repository. Enabling branch protection ensures that specific rules and restrictions are applied to branches, such as requiring code reviews and status checks before merging changes.
+  categories:
+    - Code Security
+    - Access Control
+  recommendations:
+    - Enable branch protection on critical branches to enforce code review and status check requirements.
+    - Configure branch protection settings to prevent force pushes and deletions on protected branches.
+  incidents:
+    - description: Unauthorized modifications to protected branches due to insufficient branch protection.
+      reference: https://example.com/unauthorized-modifications-github
+
+- control: CS-003
+  description: Scan Code for Hard Coded Secrets.
+  purpose: This control involves scanning the source code for hard-coded secrets, such as API keys, passwords, and tokens. Identifying and removing hard-coded secrets helps mitigate the risk of unauthorized access and data breaches.
+  categories:
+    - Code Security
+    - Secrets Management
+  recommendations:
+    - Implement secure coding practices to avoid hard-coding sensitive information in source code.
+    - Utilize environment variables or secure vaults to manage and protect sensitive credentials.
+  incidents:
+    - description: Data breach caused by exposure of hard-coded API keys in source code.
+      reference: https://example.com/data-breach-hard-coded-secrets
+
+- control: CS-004
+  description: Deep Scan code for leakage in commit history.
+  purpose: This control involves performing a deep scan of the code repository to identify any leakage in commit history. Analyzing commit history helps detect sensitive information, code changes, and potential security vulnerabilities that may have been unintentionally exposed.
+  categories:
+    - Code Security
+    - Vulnerability Management
+  recommendations:
+    - Regularly review commit history for unintended exposure of sensitive information or credentials.
+    - Implement access controls and permissions to restrict access to sensitive data in commit logs.
+  incidents:
+    - description: Exposure of sensitive data in commit history leading to a security incident.
+      reference: https://example.com/sensitive-data-exposure-commit-history
+
+- control: CS-005
+  description: Software Component Analysis (SCA) for dependencies.
+  purpose: This control involves conducting software component analysis (SCA) to identify and manage dependencies used in the codebase. SCA helps detect and remediate vulnerabilities in third-party libraries and frameworks, reducing the risk of security breaches due to insecure dependencies.
+  categories:
+    - Code Security
+    - Dependency Management
+  recommendations:
+    - Regularly update and patch dependencies to mitigate known vulnerabilities.
+    - Implement automated dependency scanning tools to identify and remediate security issues in third-party libraries.
+  incidents:
+    - description: Exploitation of known vulnerabilities in outdated third-party dependencies.
+      reference: https://example.com/vulnerability-exploitation-third-party-deps
+
+- control: CS-006
+  description: Generate SBOM of the repo.
+  purpose: This control involves generating a software bill of materials (SBOM) for the code repository, documenting all software components and dependencies used in the application. SBOM provides visibility into the software supply chain and facilitates vulnerability management and compliance efforts.
+  categories:
+    - Code Security
+    - Inventory Management
+  recommendations:
+    - Utilize automated tools to generate and maintain an up-to-date software bill of materials (SBOM) for the code repository.
+    - Integrate SBOM generation into the software development lifecycle to ensure continuous visibility into software components and dependencies.
+  incidents:
+    - description: Lack of visibility into software components leading to delayed vulnerability remediation.
+      reference: https://example.com/software-component-visibility-lack

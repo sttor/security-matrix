@@ -1,0 +1,86 @@
+- control: INV-001
+  description: List IP Addresses that belong to your organization.
+  purpose: This control involves listing all IP addresses that belong to the organization's network infrastructure. Maintaining an inventory of IP addresses helps organizations track assets, monitor network activity, and identify potential security vulnerabilities or unauthorized devices.
+  categories:
+    - Assets Inventory
+    - Network Security
+  recommendations:
+    - Regularly update the inventory of IP addresses to reflect changes in the network infrastructure.
+    - Implement automated network scanning tools to discover and catalog IP addresses across the organization's environment.
+  incidents:
+    - description: Unauthorized access to network resources due to undocumented IP addresses.
+      reference: https://example.com/unauthorized-access-undocumented-ips
+
+- control: INV-002
+  description: List all Domains and Subdomains.
+  purpose: This control involves listing all domains and subdomains associated with the organization's online presence. Maintaining a comprehensive inventory of domains helps organizations manage their digital assets, track domain ownership, and monitor for unauthorized domain registrations or DNS changes.
+  categories:
+    - Assets Inventory
+    - Domain Management
+  recommendations:
+    - Use domain registration and DNS management tools to centralize domain inventory and track domain ownership information.
+    - Implement domain monitoring services to detect unauthorized domain registrations or DNS changes.
+  incidents:
+    - description: Phishing attacks leveraging unauthorized domains similar to the organization's brand.
+      reference: https://example.com/phishing-attacks-unauthorized-domains
+
+- control: INV-003
+  description: List DNS records primarily MX and CNAMEs.
+  purpose: This control involves listing DNS records, focusing on mail exchange (MX) and canonical name (CNAME) records. Maintaining an inventory of DNS records helps organizations manage DNS configurations, troubleshoot network issues, and prevent DNS-related security incidents such as DNS spoofing or domain hijacking.
+  categories:
+    - Assets Inventory
+    - DNS Management
+  recommendations:
+    - Implement automated DNS record discovery tools to maintain an up-to-date inventory of DNS configurations.
+    - Regularly review and audit DNS records to ensure accuracy and integrity.
+  incidents:
+    - description: DNS spoofing attack exploiting outdated or misconfigured MX or CNAME records.
+      reference: https://example.com/dns-spoofing-mx-cname
+
+- control: INV-004
+  description: Add your Github Repositories.
+  purpose: This control involves adding the organization's GitHub repositories to the inventory. Maintaining a centralized repository inventory helps organizations manage source code, track repository access, and enforce security policies to protect sensitive code assets.
+  categories:
+    - Assets Inventory
+    - Source Code Management
+  recommendations:
+    - Integrate GitHub repository management with organizational identity and access management (IAM) systems to enforce access controls and permissions.
+    - Implement repository scanning tools to detect and remediate security vulnerabilities in GitHub repositories.
+  incidents:
+    - description: Unauthorized access to sensitive code repositories due to lack of repository inventory.
+      reference: https://example.com/unauthorized-access-github-repos
+
+- control: INV-005
+  description: Add your Bitbucket Repositories.
+  purpose: This control involves adding the organization's Bitbucket repositories to the inventory. Maintaining a centralized repository inventory helps organizations manage source code, track repository access, and enforce security policies to protect sensitive code assets.
+  categories:
+    - Assets Inventory
+    - Source Code Management
+  recommendations:
+    - Integrate Bitbucket repository management with organizational identity and access management (IAM) systems to enforce access controls and permissions.
+    - Implement repository scanning tools to detect and remediate security vulnerabilities in Bitbucket repositories.
+  incidents:
+    - description: Unauthorized access to sensitive code repositories due to lack of repository inventory.
+      reference: https://example.com/unauthorized-access-bitbucket-repos
+
+- control: INV-006
+  description: Add your Gitlab Repositories.
+  purpose: This control involves adding the organization's GitLab repositories to the inventory. Maintaining a centralized repository inventory helps organizations manage source code, track repository access, and enforce security policies to protect sensitive code assets.
+  categories:
+    - Assets Inventory
+    - Source Code Management
+  recommendations:
+    - Integrate GitLab repository management with organizational identity and access management (IAM) systems to enforce access controls and permissions.
+    - Implement repository scanning tools to detect and remediate security vulnerabilities in GitLab repositories.
+  incidents:
+    - description: Unauthorized access to sensitive code repositories due to lack of repository inventory.
+      reference: https://example.com/unauthorized-access-gitlab-repos
+
+- control: INV-007
+  description: List your AWS accounts.
+  purpose: This control involves listing all AWS accounts associated with the organization. Maintaining an inventory of AWS accounts helps organizations track cloud resources, manage access permissions, and enforce security policies to prevent unauthorized account usage or resource misconfigurations.
+  categories:
+    - Assets Inventory
+    - Cloud Management
+  recommendations:
+    - Implement centralized identity and access management (IAM) solutions
