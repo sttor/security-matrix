@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevSecOps.bot</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .flex-item {
+      flex: 1;
+    }
+    .vertical-box {
+        border: 1px solid #ebe4e4;
+        border-radius: 3px;
+        padding: 5px;
+        color: #484545;
+        font-size: 0.7em;
+
+    }
+    .head {
+            font-weight: 800;
+            font-size: 0.75em;
+            text-transform: uppercase;
+            color: #333;
+            border-radius: 5px;
+            border: 0;
+
+     }
+
+    .blue-head {
+      font-weight: 800;
+      font-size: 0.95em;
+      color: #0e26b1;
+      border-bottom: 2px solid #111111;
+
+    }
+  </style>
+     <style>
+        .popover {
+            max-width: 400px; /* Increase the width */
+            font-family: Arial, sans-serif; /* Use Arial font */
+            font-size: 14px; /* Set font size */
+        }
+
+        .popover-title {
+                font-size: 14px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: #111111;
+        }
+
+        .popover-content {
+            font-size: 12px; /* Decrease content font size */
+            color: #777; /* Content color */
+        }
+
+        .code {
+            background-color: #f0f8ff; /* Light blue background color */
+            color: #333; /* Text color */
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            white-space: pre-wrap;
+            font-family: monospace;
+            font-size: 12px; /* Set code font size */
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #5a69ca;
+            color: #ffffff;
+            padding: 3px 6px; /* Adjust padding */
+            margin-right: 5px;
+            border-radius: 2px;
+            font-size: 10px; /* Set tag font size */
+        }
+
+        .depends-on {
+           /* font-style: italic;  Italicize depends on content */
+        }
+
+        .button-trigger {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid mt-3">
+    <h4 class="mb-4 text-center">DevSecOps Automation Matrix</h4>
+    <div class="flex-container">
+      <div class="flex-item">
+        <div class="vertical-box head ">Inventory</div>
+        <a class="button-trigger" data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box">
+                <span class="blue-head">INV-001</span>
+                <br/>
+                List IP addresses
+            </div>
+        </a>
+        <a class="button-trigger" data-placement="right" href="#">
+            <div class="vertical-box">
+            <span class="blue-head">INV-002</span><br/> List domains and subdomains.
+            </div>
+        </a>
+        <div class="vertical-box">
+                    <span class="blue-head">INV-003</span><br/> List DNS records.
+        </div>
+        <div class="vertical-box">
+            <span class="blue-head">INV-004</span><br/> List source code repositories like Github.
+            </div>
+        <div class="vertical-box">
+                    <span class="blue-head">INV-005</span><br/> List cloud accounts like GCP, AWS & Azure.
+        </div>
+        <div class="vertical-box">
+                    <span class="blue-head">INV-006</span><br/> Add K8s cluster assets.
+        </div>
+          <div class="vertical-box">
+                    <span class="blue-head">INV-007</span><br/> List docker images from public and private registry.
+
+        </div>
+      </div>
+         <div class="flex-item">
+        <div class="vertical-box head ">Code</div>
+        <div class="vertical-box"><span class="blue-head">CS-001</span><br/> Check 2FA on Github.</div>
+        <div class="vertical-box"><span class="blue-head">CS-002</span><br/> Check  Branch Protection configuration.</div>
+        <div class="vertical-box"><span class="blue-head">CS-003</span><br/> Scan for hard coded secrets.</div>
+        <div class="vertical-box"><span class="blue-head">CS-004</span><br/> Deep scan code for leakage in commit history.</div>
+        <div class="vertical-box"><span class="blue-head">CS-005</span><br/> Software Component Analysis (SCA) for dependencies.</div>
+        <div class="vertical-box"><span class="blue-head">CS-006</span><br/> Generate SBOM of the repo.</div>
+        <div class="vertical-box"><span class="blue-head">CS-007</span><br/> Scan Code for Security Vulnerabilities like SQL Injection, RCE, XSS, etc.</div>
+      </div>
+
+      <div class="flex-item">
+        <div class="vertical-box head">CI/CD</div>
+        <div class="vertical-box"><span class="blue-head">CI-001</span><br/> SAST scan on every PR requests.</div>
+        <div class="vertical-box"><span class="blue-head">CI-002</span><br/> DAST on OpenAPI specifications with every code change.</div>
+        <div class="vertical-box"><span class="blue-head">CI-003</span><br/> DAST scan on postman collections on code changes.</div>
+        <div class="vertical-box"><span class="blue-head">CI-004</span><br/> IaC  scan for cloud configurations.</div>
+        <div class="vertical-box"><span class="blue-head">CI-005</span><br/> IaC scan for Kubernetes Configurations.</div>
+        <div class="vertical-box"><span class="blue-head">CI-006</span><br/> Run MobSF for mobile application Codes.</div>
+
+      </div>
+      <div class="flex-item">
+        <div class="vertical-box head ">Application</div>
+        <div class="vertical-box"><span class="blue-head">AP-001</span><br/> Network port scan for all IP Assets.</div>
+        <div class="vertical-box"><span class="blue-head">AP-002</span><br/> Enable perimeter security.</div>
+        <div class="vertical-box"><span class="blue-head">AP-003</span><br/> Run ZAP Scan on OpenAPI Specifications.</div>
+        <div class="vertical-box"><span class="blue-head">AP-004</span><br/> Run ZAP Scan on Postman Collections.</div>
+        <div class="vertical-box"><span class="blue-head">AP-005</span><br/> Deep Authenticated ZAP Scan for Running Applications.</div>
+        <div class="vertical-box"><span class="blue-head">AP-006</span><br/> Enable Dynamic Scanning on Mobile applications.</div>
+
+
+      </div>
+        <div class="flex-item">
+        <div class="vertical-box head">Cloud</div>
+
+        <div class="vertical-box">
+            <span class="blue-head">CL-001</span><br/> Scan cloud for misconfigurations.
+        </div>
+          <div class="vertical-box">
+            <span class="blue-head">CL-002</span><br/> Scan IaC for misconfigurations.
+            </div>
+          <div class="vertical-box">
+              <span class="blue-head">CL-003</span><br/>
+              Enable default security tools like GuardDuty, SecurityHub, WAF, etc.
+            </div>
+
+          <div class="vertical-box">
+              <span class="blue-head">CL-005</span><br/> Scan IaC for misconfigurations
+            </div>
+          <div class="vertical-box">
+              <span class="blue-head">CL-006</span><br/> Check 2FA status.
+            </div>
+          <div class="vertical-box">
+              <span class="blue-head">CL-007</span><br/> Enable continuous compliance for cloud.
+              </div>
+          <div class="vertical-box">
+              <span class="blue-head">CL-008</span><br/> Monitor cloud attack paths.
+          </div>
+
+      </div>
+
+      <div class="flex-item">
+        <div class="vertical-box head">Endpoints</div>
+          <div class="vertical-box"> <span class="blue-head">ES-001</span><br/> Enable realtime investigation.</div>
+          <div class="vertical-box"> <span class="blue-head">ES-002</span><br/> Check Security Compliance Violations on Endpoints.</div>
+          <div class="vertical-box"> <span class="blue-head">ES-003</span><br/> Enable Threat Detection .</div>
+          <div class="vertical-box"> <span class="blue-head">ES-004</span><br/> Detect Malwares.</div>
+
+      </div>
+
+      <div class="flex-item">
+        <div class="vertical-box head">Kubernetes</div>
+        <div class="vertical-box"> <span class="blue-head">KS-001</span><br/> Scan for misconfigurations.</div>
+        <div class="vertical-box"> <span class="blue-head">KS-002</span><br/> Scan for secrets exposed.</div>
+        <div class="vertical-box"> <span class="blue-head">KS-003</span><br/> Generate KBOM and SBOM, scan it for vulnerabilities.</div>
+        <div class="vertical-box"> <span class="blue-head">KS-004</span><br/> Enable runtime security protection:.</div>
+        <div class="vertical-box"> <span class="blue-head">KS-005</span><br/> Analyze permissive RBAC rules .</div>
+        <div class="vertical-box"> <span class="blue-head">KS-006</span><br/> Perform Penetration testing on Cluster.</div>
+        <div class="vertical-box"> <span class="blue-head">KS-007</span><br/> Continuous Compliance for the Cluster.</div>
+        <div class="vertical-box"> <span class="blue-head">KS-008</span><br/> Watch events.</div>
+        <div class="vertical-box"> <span class="blue-head">KS-009</span><br/> Enable Audit and API server logging.</div>
+        <div class="vertical-box"> <span class="blue-head">KS-010</span><br/> Scan IaC like Helm Charts.</div>
+        <div class="vertical-box"> <span class="blue-head">KS-011</span><br/> CIS Benchmarking for Docker images.</div>
+        <div class="vertical-box"> <span class="blue-head">KS-012</span><br/> Scanning private registry.</div>
+        <div class="vertical-box"> <span class="blue-head">KS-012</span><br/> Monitor kubernetes attack paths.</div>
+      </div>
+      <div class="flex-item">
+        <div class="vertical-box head">Threat</div>
+           <div class="vertical-box"> <span class="blue-head">TI-001</span><br/> Configure Threat Intel sources for the organisation.</div>
+           <div class="vertical-box"> <span class="blue-head">TI-002</span><br/> Correlate Threat with Runtime.</div>
+      </div>
+      <div class="flex-item">
+        <div class="vertical-box head">Logs</div>
+           <div class="vertical-box"> <span class="blue-head">SL-001</span><br/> Capture realtime security logs and events.</div>
+           <div class="vertical-box"> <span class="blue-head">SL-002</span><br/> Historical data storage.</div>
+           <div class="vertical-box"> <span class="blue-head">SL-003</span><br/> Setup alerting rules on logs.</div>
+           <div class="vertical-box"> <span class="blue-head">SL-004</span><br/> Enrichment with threat intel.</div>
+           <div class="vertical-box"> <span class="blue-head">SL-005</span><br/> Check PIIs or Card data leakage in logs for PCI-DSS.</div>
+           <div class="vertical-box"> <span class="blue-head">SL-006</span><br/> Store HTTP Ingress Logs.</div>
+           <div class="vertical-box"> <span class="blue-head">SL-007</span><br/> Store Sysdig Falco Events.</div>
+           <div class="vertical-box"> <span class="blue-head">SL-008</span><br/> Store WAF events.</div>
+           <div class="vertical-box"> <span class="blue-head">SL-009</span><br/> Store Cloud activity logs like CloudTrail.</div>
+      </div>
+
+
+
+      <div class="flex-item">
+        <div class="vertical-box head">Incident</div>
+           <div class="vertical-box"> <span class="blue-head">IM-001</span><br/> Manage Security Tickets.</div>
+           <div class="vertical-box"> <span class="blue-head">IM-002</span><br/> Configure Alerting.</div>
+      </div>
+    </div>
+  </div>
+
+<!-- Bootstrap Bundle with Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- js-yaml -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // YAML data containing button information
+        var buttonDataYAML = `
+buttonData:
+  button1:
+    id: INV-001
+    title: Manage Inventory
+    description: |-
+        You should manage the inventory assets. The inventory can have this and that and ok ok
+        bla bla bla
+    depends: INV-005
+    tags:
+      - tag1
+      - tag2
+  button2:
+    id: INV-002
+    title: Update Inventory
+    description: Update the inventory data based on latest inputs.
+    code: |-
+      # This is a bash script
+      echo "Hello, world!"
+    depends: INV-006
+    tags:
+      - tag3
+      - tag4
+  button3:
+    id: INV-003
+    title: Inspect Inventory
+    description: Inspect the inventory assets for any discrepancies.
+    code: |-
+      print("This is Python code")
+      print("It can have multiple lines")
+    depends: ""
+    tags:
+      - tag5
+      - tag6
+`;
+
+        // Parse YAML data to get buttonData object
+        var parsedData = jsyaml.load(buttonDataYAML);
+        var buttonData = parsedData.buttonData;
+
+        // Add click event listener to buttons with class 'button-trigger'
+        $('.button-trigger').click(function(e) {
+            e.preventDefault(); // Prevent default link behavior
+            var placement = $(this).data('placement');
+            // Get data for the clicked button
+            var buttonId = $(this).index(); // Index starts from 0
+            var data = buttonData['button' + buttonId];
+            // Set popover content
+            var popoverContent = '<div>' +
+                 '<h5 class="popover-title">' + data.id + ' ' + data.title + '</h5>' +
+                '<p class="popover-content">' + data.description + '</p>' +
+                (data.code ? '<pre class="code">' + data.code + '</pre>' : '') +
+                (data.depends ? '<p class="popover-content"><strong>Related:</strong> <span class="depends-on">' + data.depends + '</span></p>' : '') +
+                '<p class="popover-content">' +
+                data.tags.map(tag => '<span class="tag">' + tag + '</span>').join('') + '</p></div>';
+
+            // Open popover corresponding to the clicked button
+            $(this).popover({
+                content: popoverContent,
+                trigger: 'manual',
+                html: true,
+                placement: placement // Set placement based on button data-placement attribute
+            });
+            $(this).popover('toggle');
+        });
+
+        // Close popover when clicked outside
+        $(document).on('click', function (e) {
+            if ($(e.target).data('bs-toggle') !== 'popover'
+                && $(e.target).parents('.popover.in').length === 0) {
+                $('[data-bs-toggle="popover"]').popover('hide');
+            }
+        });
+    });
+</script>
+</body>
+</html>
