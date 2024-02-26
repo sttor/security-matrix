@@ -1,0 +1,77 @@
+- control: CI-001
+  description: SAST scan on every PR requests.
+  purpose: This control involves conducting static application security testing (SAST) on every pull request (PR) submitted to the code repository. SAST helps identify security vulnerabilities and coding errors early in the development process, enabling timely remediation and risk reduction.
+  categories:
+    - CI/CD
+    - Static Analysis
+  recommendations:
+    - Integrate SAST tools into the CI/CD pipeline to automatically scan code changes in pull requests.
+    - Configure SAST tools to provide actionable feedback to developers for vulnerability remediation.
+  incidents:
+    - description: Security vulnerabilities introduced through code changes in pull requests.
+      reference: https://example.com/sast-pull-request-vulnerabilities
+
+- control: CI-002
+  description: DAST on OpenAPI specifications with every code change.
+  purpose: This control involves performing dynamic application security testing (DAST) on OpenAPI specifications with every code change. DAST helps identify security vulnerabilities and misconfigurations in RESTful APIs defined by OpenAPI specifications, ensuring the security and integrity of API endpoints.
+  categories:
+    - CI/CD
+    - Dynamic Analysis
+  recommendations:
+    - Integrate DAST tools with CI/CD pipelines to automatically scan OpenAPI specifications for security vulnerabilities.
+    - Configure DAST tools to simulate real-world attacks and assess the security posture of API endpoints.
+  incidents:
+    - description: Exploitable security vulnerabilities discovered in API endpoints defined by OpenAPI specifications.
+      reference: https://example.com/dast-openapi-vulnerabilities
+
+- control: CI-003
+  description: DAST scan on Postman collections on code changes.
+  purpose: This control involves conducting dynamic application security testing (DAST) on Postman collections with every code change. DAST helps identify security vulnerabilities and weaknesses in RESTful APIs defined by Postman collections, enabling proactive vulnerability management and risk mitigation.
+  categories:
+    - CI/CD
+    - Dynamic Analysis
+  recommendations:
+    - Integrate DAST tools with CI/CD pipelines to automatically scan Postman collections for security vulnerabilities.
+    - Configure DAST tools to authenticate and interact with API endpoints defined in Postman collections during testing.
+  incidents:
+    - description: Critical security vulnerabilities identified in API endpoints defined by Postman collections.
+      reference: https://example.com/dast-postman-vulnerabilities
+
+- control: CI-004
+  description: IaC scan for cloud configurations.
+  purpose: This control involves performing infrastructure as code (IaC) scans for cloud configurations to identify security misconfigurations and compliance violations. IaC scans help ensure the integrity and security of cloud environments by detecting and remediating configuration drift, unauthorized changes, and insecure settings.
+  categories:
+    - CI/CD
+    - Infrastructure as Code (IaC)
+  recommendations:
+    - Integrate IaC scanning tools with CI/CD pipelines to automatically assess cloud configurations for security compliance.
+    - Implement policy as code (PaC) frameworks to enforce security policies and best practices for cloud infrastructure provisioning.
+  incidents:
+    - description: Security misconfigurations in cloud environments leading to data breaches or service disruptions.
+      reference: https://example.com/iac-cloud-security-incidents
+
+- control: CI-005
+  description: IaC scan for Kubernetes Configurations.
+  purpose: This control involves performing infrastructure as code (IaC) scans for Kubernetes configurations to identify security vulnerabilities and misconfigurations. IaC scans help ensure the security and compliance of Kubernetes clusters by detecting and remediating configuration errors, access controls, and pod security policies.
+  categories:
+    - CI/CD
+    - Kubernetes Security
+  recommendations:
+    - Integrate IaC scanning tools with CI/CD pipelines to automatically assess Kubernetes configurations for security compliance.
+    - Implement automated remediation workflows to address security findings and enforce Kubernetes security best practices.
+  incidents:
+    - description: Kubernetes misconfigurations leading to unauthorized access, data breaches, or container escapes.
+      reference: https://example.com/iac-kubernetes-security-incidents
+
+- control: CI-006
+  description: Run MobSF for mobile application Codes.
+  purpose: This control involves running Mobile Security Framework (MobSF) scans on mobile application codebases to identify security vulnerabilities and weaknesses. MobSF scans help ensure the security and resilience of mobile applications by detecting and remediating common security issues, including insecure data storage, insecure communication, and insecure coding practices.
+  categories:
+    - CI/CD
+    - Mobile Security
+  recommendations:
+    - Integrate MobSF scanning into CI/CD pipelines to automatically assess mobile application codebases for security vulnerabilities.
+    - Configure MobSF scans to analyze mobile app binaries, source code, and third-party dependencies for security flaws.
+  incidents:
+    - description: Security vulnerabilities discovered in mobile applications leading to privacy violations or data breaches.
+      reference: https://example.com/mobsf-mobile-security-incidents

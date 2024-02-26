@@ -1,0 +1,77 @@
+- control: AP-001
+  description: Network Port Scan for All IP Assets
+  purpose: This control involves conducting network port scans to identify and assess all IP assets within the organization's network infrastructure. By performing comprehensive port scans, organizations can identify open ports, services, and potential security vulnerabilities, allowing them to implement appropriate security measures and safeguard against unauthorized access and cyber attacks.
+  categories:
+    - Network Security
+    - Vulnerability Management
+  recommendations:
+    - Conduct regular network port scans using automated scanning tools to identify and assess all IP assets within the organization's network infrastructure.
+    - Implement access controls and firewall rules to restrict access to unnecessary ports and services, minimizing the attack surface and reducing the risk of unauthorized access and exploitation.
+  incidents:
+    - description: Unauthorized access to open ports leading to a security breach.
+      reference: https://www.darkreading.com/attacks-breaches/10-notable-security-breaches-of-2021/d/d-id/1359480
+
+- control: AP-002
+  description: Enable Perimeter Security
+  purpose: This control involves implementing perimeter security measures to protect the organization's network infrastructure from external threats and unauthorized access. By establishing strong perimeter defenses, organizations can detect and prevent malicious activities, intrusions, and unauthorized access attempts, safeguarding critical assets and data from cyber attacks and security breaches.
+  categories:
+    - Network Security
+    - Access Control
+  recommendations:
+    - Deploy firewalls, intrusion detection/prevention systems (IDS/IPS), and web application firewalls (WAFs) to establish a secure perimeter around the organization's network infrastructure.
+    - Configure perimeter security devices to monitor and filter incoming and outgoing network traffic, blocking malicious activities and unauthorized access attempts.
+  incidents:
+    - description: External cyber attack targeting the organization's network perimeter.
+      reference: https://www.securityweek.com/analysis-shows-average-cost-enterprise-data-breach-surpasses-4-million
+
+- control: AP-003
+  description: Run ZAP Scan on OpenAPI Specifications
+  purpose: This control involves running a ZAP (Zed Attack Proxy) scan on OpenAPI specifications to identify security vulnerabilities and weaknesses in API endpoints and web services. By conducting ZAP scans on OpenAPI specifications, organizations can identify and remediate security flaws, such as injection attacks, broken authentication, and sensitive data exposure, enhancing the security posture of their APIs and web applications.
+  categories:
+    - Application Security
+    - API Security
+  recommendations:
+    - Integrate ZAP scanning into the API development lifecycle to assess the security of OpenAPI specifications during development and testing phases.
+    - Configure ZAP scans to evaluate API endpoints for common security vulnerabilities, such as SQL injection, XSS, CSRF, and insecure deserialization.
+  incidents:
+    - description: API endpoint vulnerability exploited by attackers to gain unauthorized access.
+      reference: https://www.darkreading.com/vulnerabilities-threats/api-security-issues-what-you-need-to-know/d/d-id/1340958
+
+- control: AP-004
+  description: Run ZAP Scan on Postman Collections
+  purpose: This control involves running a ZAP (Zed Attack Proxy) scan on Postman collections to identify security vulnerabilities and weaknesses in API requests and responses. By conducting ZAP scans on Postman collections, organizations can detect and remediate security flaws, such as injection attacks, broken authentication, and insecure communication, ensuring the security and integrity of their APIs and web services.
+  categories:
+    - Application Security
+    - API Security
+  recommendations:
+    - Integrate ZAP scanning into the API development lifecycle to assess the security of Postman collections during development and testing phases.
+    - Configure ZAP scans to evaluate API requests and responses for common security vulnerabilities, such as SQL injection, XSS, CSRF, and insecure communication protocols.
+  incidents:
+    - description: API request vulnerability exploited by attackers to manipulate data or execute unauthorized actions.
+      reference: https://www.darkreading.com/cloud/flaws-in-code-hosting-tools-put-dev-teams-at-risk/d/d-id/1341255
+
+- control: AP-005
+  description: Deep Authenticated ZAP Scan for Running Applications
+  purpose: This control involves conducting deep authenticated ZAP (Zed Attack Proxy) scans for running applications to identify security vulnerabilities and weaknesses in web applications and APIs. By performing deep authenticated ZAP scans, organizations can assess the security posture of their applications, detect vulnerabilities, and remediate security flaws to enhance their resilience against cyber threats and attacks.
+  categories:
+    - Application Security
+    - Web Application Security
+  recommendations:
+    - Configure ZAP scanning tools to perform deep authenticated scans for running applications, simulating authenticated user sessions and interactions to identify security vulnerabilities.
+    - Establish processes for prioritizing and remediating security findings identified during deep authenticated ZAP scans, addressing critical vulnerabilities and security weaknesses promptly.
+  incidents:
+    - description: Authentication bypass vulnerability exploited by attackers to gain unauthorized access to sensitive data or functionality.
+      reference: https://www.darkreading.com/vulnerabilities-threats/how-developers-can-meet-modern-application-security-challenges/a/d-id/1339751
+
+- control: AP-006
+  description: Enable Dynamic Scanning on Mobile Applications
+  purpose: This control involves enabling dynamic application security testing (DAST) on mobile applications to identify and mitigate security vulnerabilities and weaknesses. By conducting dynamic scans on mobile applications, organizations can assess the security posture of their mobile apps, detect vulnerabilities, and remediate security flaws to enhance their resilience against cyber attacks and threats.
+  categories:
+    - Application Security
+    - Mobile Security
+  recommendations:
+    - Integrate dynamic application security testing (DAST) tools specifically designed for mobile applications into the mobile app development lifecycle.
+    - Configure DAST tools to perform automated scans of mobile applications, including both Android and iOS platforms, to detect security vulnerabilities and weaknesses.
+  incidents:
+    - description: Vulnerability in mobile application exploited by attackers to compromise user devices or steal sensitive information.
+      reference: https://www.darkreading.com/mobile-security/mobile-security-in-the-workplace-5-key-trends-to-watch/a/d-id/1340992

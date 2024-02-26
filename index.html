@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevSecOps.bot</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevSecOps.bot</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
     .flex-container {
       display: flex;
       justify-content: space-between;
@@ -33,17 +33,17 @@
      }
 
     .blue-head {
-      font-weight: 800;
-      font-size: 0.95em;
-      color: #0e26b1;
-      border-bottom: 2px solid #111111;
+        font-weight: 800;
+        font-size: 0.95em;
+        color: #656669;
+        border-bottom: 0.175em solid #333;
     }
     .purpose {
         color: black;
         font-weight: 600;
     }
   </style>
-     <style>
+    <style>
         .popover {
             max-width: 400px; /* Increase the width */
             font-family: Arial, sans-serif; /* Use Arial font */
@@ -61,7 +61,9 @@
             font-size: 12px; /* Decrease content font size */
             color: #777; /* Content color */
         }
-
+        .popover-body {
+            background-color: lightyellow;
+        }
         .code {
             background-color: #f0f8ff; /* Light blue background color */
             color: #333; /* Text color */
@@ -93,153 +95,235 @@
     </style>
 </head>
 <body>
-<div class="container-fluid mt-3">
-    <h4 class="mb-4 text-center">DevSecOps Automation Matrix</h4>
+<div class="container-fluid mt-8">
+    <h5 class="mb-4 mt-2">
+        <img height="50px" width="50px" src="logo_bg.png"/> &nbsp;
+        devsecops
+    </h5>
     <div class="flex-container">
-      <div class="flex-item">
-        <div class="vertical-box head ">Inventory</div>
-        <a class="button-trigger" data-bs-toggle="popover" data-placement="right" href="#">
+        <div class="flex-item">
+            <div class="vertical-box head ">Inventory</div>
+              <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
             <div class="vertical-box">
                 <span class="blue-head">INV-001</span>
                 <br/>
                 List IP addresses
             </div>
         </a>
-        <a class="button-trigger" data-placement="right" href="#">
+
+               <a class="button-trigger"   data-id="2" data-bs-toggle="popover" data-placement="right" href="#">
             <div class="vertical-box">
-            <span class="blue-head">INV-002</span><br/> List domains and subdomains.
+                <span class="blue-head">INV-002</span><br/> List domains and subdomains.
             </div>
         </a>
-        <div class="vertical-box">
-                    <span class="blue-head">INV-003</span><br/> List DNS records.
-        </div>
-        <div class="vertical-box">
-            <span class="blue-head">INV-004</span><br/> List source code repositories like Github.
+
+             <a class="button-trigger"  data-id="3"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box">
+                <span class="blue-head">INV-003</span><br/> List DNS records.
             </div>
-        <div class="vertical-box">
-                    <span class="blue-head">INV-005</span><br/> List cloud accounts like GCP, AWS & Azure.
+        </a>
+                <a class="button-trigger"  data-id="4"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box">
+                <span class="blue-head">INV-004</span><br/> List source code repositories like Github.
+            </div>
+
+        </a>      <a class="button-trigger"  data-id="5"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box">
+                <span class="blue-head">INV-005</span><br/> List cloud accounts like GCP, AWS & Azure.
+            </div>
+        </a>     <a class="button-trigger"  data-id="6"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box">
+                <span class="blue-head">INV-006</span><br/> Add K8s cluster assets.
+            </div>
+        </a>
+
+            <a class="button-trigger"  data-id="7"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box">
+                <span class="blue-head">INV-007</span><br/> List docker images from public and private registry.
+
+            </div>
+            </a>
+            <a class="button-trigger"  data-id="8"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box">
+                <span class="blue-head">INV-008</span><br/> List all the endpoints of the organization.
+
+            </div>
+            </a>
         </div>
-        <div class="vertical-box">
-                    <span class="blue-head">INV-006</span><br/> Add K8s cluster assets.
-        </div>
-          <div class="vertical-box">
-                    <span class="blue-head">INV-007</span><br/> List docker images from public and private registry.
-
-        </div>
-      </div>
-         <div class="flex-item">
-        <div class="vertical-box head ">Code</div>
-        <div class="vertical-box"><span class="blue-head">CS-001</span><br/> Check 2FA on Github.</div>
-        <div class="vertical-box"><span class="blue-head">CS-002</span><br/> Check  Branch Protection configuration.</div>
-        <div class="vertical-box"><span class="blue-head">CS-003</span><br/> Scan for hard coded secrets.</div>
-        <div class="vertical-box"><span class="blue-head">CS-004</span><br/> Deep scan code for leakage in commit history.</div>
-        <div class="vertical-box"><span class="blue-head">CS-005</span><br/> Software Component Analysis (SCA) for dependencies.</div>
-        <div class="vertical-box"><span class="blue-head">CS-006</span><br/> Generate SBOM of the repo.</div>
-        <div class="vertical-box"><span class="blue-head">CS-007</span><br/> Scan Code for Security Vulnerabilities like SQL Injection, RCE, XSS, etc.</div>
-      </div>
-
-      <div class="flex-item">
-        <div class="vertical-box head">CI/CD</div>
-        <div class="vertical-box"><span class="blue-head">CI-001</span><br/> SAST scan on every PR requests.</div>
-        <div class="vertical-box"><span class="blue-head">CI-002</span><br/> DAST on OpenAPI specifications with every code change.</div>
-        <div class="vertical-box"><span class="blue-head">CI-003</span><br/> DAST scan on postman collections on code changes.</div>
-        <div class="vertical-box"><span class="blue-head">CI-004</span><br/> IaC  scan for cloud configurations.</div>
-        <div class="vertical-box"><span class="blue-head">CI-005</span><br/> IaC scan for Kubernetes Configurations.</div>
-        <div class="vertical-box"><span class="blue-head">CI-006</span><br/> Run MobSF for mobile application Codes.</div>
-
-      </div>
-      <div class="flex-item">
-        <div class="vertical-box head ">Application</div>
-        <div class="vertical-box"><span class="blue-head">AP-001</span><br/> Network port scan for all IP Assets.</div>
-        <div class="vertical-box"><span class="blue-head">AP-002</span><br/> Enable perimeter security.</div>
-        <div class="vertical-box"><span class="blue-head">AP-003</span><br/> Run ZAP Scan on OpenAPI Specifications.</div>
-        <div class="vertical-box"><span class="blue-head">AP-004</span><br/> Run ZAP Scan on Postman Collections.</div>
-        <div class="vertical-box"><span class="blue-head">AP-005</span><br/> Deep Authenticated ZAP Scan for Running Applications.</div>
-        <div class="vertical-box"><span class="blue-head">AP-006</span><br/> Enable Dynamic Scanning on Mobile applications.</div>
-
-
-      </div>
         <div class="flex-item">
-        <div class="vertical-box head">Cloud</div>
-
-        <div class="vertical-box">
-            <span class="blue-head">CL-001</span><br/> Scan cloud for misconfigurations.
+            <div class="vertical-box head ">Code</div>
+                <a class="button-trigger"  data-id="9"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"><span class="blue-head">CS-001</span><br/> Check 2FA on Github.</div>
+        </a>    <a class="button-trigger"  data-id="10"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"><span class="blue-head">CS-002</span><br/> Check  Branch Protection configuration.</div>
+        </a>    <a class="button-trigger"  data-id="11"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"><span class="blue-head">CS-003</span><br/> Scan for hard coded secrets.</div>
+        </a>    <a class="button-trigger"  data-id="12"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"><span class="blue-head">CS-004</span><br/> Deep scan code for leakage in commit history.</div>
+        </a>    <a class="button-trigger"  data-id="13"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"><span class="blue-head">CS-005</span><br/> Software Component Analysis (SCA) for dependencies.</div>
+        </a>    <a class="button-trigger"  data-id="14"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"><span class="blue-head">CS-006</span><br/> Generate SBOM of the repo.</div>
+        </a>    <a class="button-trigger"  data-id="15"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"><span class="blue-head">CS-007</span><br/> Scan Code for Security Vulnerabilities like SQL Injection, RCE, XSS, etc.</div>
+            </a>
         </div>
-          <div class="vertical-box">
-            <span class="blue-head">CL-002</span><br/> Scan IaC for misconfigurations.
+
+        <div class="flex-item">
+            <div class="vertical-box head">CI/CD</div>
+                <a class="button-trigger"  data-id="16"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"><span class="blue-head">CI-001</span><br/> SAST scan on every PR requests.</div>
+        </a>    <a class="button-trigger"  data-id="17"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"><span class="blue-head">CI-002</span><br/> DAST on OpenAPI specifications with every code change.</div>
+        </a>    <a class="button-trigger"  data-id="18"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"><span class="blue-head">CI-003</span><br/> DAST scan on postman collections on code changes.</div>
+        </a>    <a class="button-trigger"  data-id="19"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"><span class="blue-head">CI-004</span><br/> IaC  scan for cloud configurations.</div>
+        </a>    <a class="button-trigger"  data-id="20"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"><span class="blue-head">CI-005</span><br/> IaC scan for Kubernetes Configurations.</div>
+        </a>    <a class="button-trigger"  data-id="21"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"><span class="blue-head">CI-006</span><br/> Run MobSF for mobile application Codes.</div>
+            </a>
+        </div>
+        <div class="flex-item">
+            <div class="vertical-box head ">Application</div>
+              <a class="button-trigger"  data-id="22"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"><span class="blue-head">AP-001</span><br/> Network port scan for all IP Assets.</div>
+        </a>    <a class="button-trigger"  data-id="23"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"><span class="blue-head">AP-002</span><br/> Enable perimeter security.</div>
+        </a>    <a class="button-trigger"  data-id="24"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"><span class="blue-head">AP-003</span><br/> Run ZAP Scan on OpenAPI Specifications.</div>
+        </a>    <a class="button-trigger"  data-id="25"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"><span class="blue-head">AP-004</span><br/> Run ZAP Scan on Postman Collections.</div>
+        </a>    <a class="button-trigger"  data-id="26"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"><span class="blue-head">AP-005</span><br/> Deep Authenticated ZAP Scan for Running Applications.</div>
+        </a>    <a class="button-trigger"  data-id="27"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"><span class="blue-head">AP-006</span><br/> Enable Dynamic Scanning on Mobile applications.</div>
+            </a>
+        </div>
+        <div class="flex-item">
+            <div class="vertical-box head">Cloud</div>
+             <a class="button-trigger"  data-id="28"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box">
+                <span class="blue-head">CL-001</span><br/> Scan cloud for misconfigurations.
             </div>
-          <div class="vertical-box">
-              <span class="blue-head">CL-003</span><br/>
-              Enable default security tools like GuardDuty, SecurityHub, WAF, etc.
+        </a>    <a class="button-trigger"  data-id="29"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box">
+                <span class="blue-head">CL-002</span><br/> Scan IaC for misconfigurations.
+            </div>
+        </a>    <a class="button-trigger"  data-id="30"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box">
+                <span class="blue-head">CL-003</span><br/>
+                Enable default security tools like GuardDuty, SecurityHub, WAF, etc.
             </div>
 
-          <div class="vertical-box">
-              <span class="blue-head">CL-005</span><br/> Scan IaC for misconfigurations
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box">
+                <span class="blue-head">CL-005</span><br/> Scan IaC for misconfigurations
             </div>
-          <div class="vertical-box">
-              <span class="blue-head">CL-006</span><br/> Check 2FA status.
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box">
+                <span class="blue-head">CL-006</span><br/> Check 2FA status.
             </div>
-          <div class="vertical-box">
-              <span class="blue-head">CL-007</span><br/> Enable continuous compliance for cloud.
-              </div>
-          <div class="vertical-box">
-              <span class="blue-head">CL-008</span><br/> Monitor cloud attack paths.
-          </div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box">
+                <span class="blue-head">CL-007</span><br/> Enable continuous compliance for cloud.
+            </div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box">
+                <span class="blue-head">CL-008</span><br/> Monitor cloud attack paths.
+            </div>
+            </a>
 
-      </div>
+        </div>
+        <div class="flex-item">
+            <div class="vertical-box head">Endpoints</div>
+             <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">ES-001</span><br/> Enable realtime investigation.</div>
+        </a>
+            <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">ES-002</span><br/> Check Security Compliance Violations on Endpoints.</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">ES-003</span><br/> Enable Threat Detection .</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">ES-004</span><br/> Detect Malwares.</div>
+        </a>
+        </div>
 
-      <div class="flex-item">
-        <div class="vertical-box head">Endpoints</div>
-          <div class="vertical-box"> <span class="blue-head">ES-001</span><br/> Enable realtime investigation.</div>
-          <div class="vertical-box"> <span class="blue-head">ES-002</span><br/> Check Security Compliance Violations on Endpoints.</div>
-          <div class="vertical-box"> <span class="blue-head">ES-003</span><br/> Enable Threat Detection .</div>
-          <div class="vertical-box"> <span class="blue-head">ES-004</span><br/> Detect Malwares.</div>
+        <div class="flex-item">
+            <div class="vertical-box head">Kubernetes</div>
+             <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">KS-001</span><br/> Scan for misconfigurations.</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">KS-002</span><br/> Scan for secrets exposed.</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">KS-003</span><br/> Generate KBOM and SBOM, scan it for vulnerabilities.</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">KS-004</span><br/> Enable runtime security protection.</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">KS-005</span><br/> Analyze permissive RBAC rules .</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">KS-006</span><br/> Perform Penetration testing on Cluster.</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">KS-007</span><br/> Continuous Compliance for the Cluster.</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">KS-008</span><br/> Watch events.</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">KS-009</span><br/> Enable Audit and API server logging.</div>
+        </a>
 
-      </div>
+            <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">KS-011</span><br/> CIS Benchmarking for Docker images.</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">KS-012</span><br/> Scanning public/private image registry.</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">KS-012</span><br/> Monitor kubernetes attack paths.</div>
+        </a>
+        </div>
+        <div class="flex-item">
+            <div class="vertical-box head">Threat</div>
+               <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">TI-001</span><br/> Configure Threat Intel sources for the organisation.</div>
+                </a>
+            <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">TI-002</span><br/> Correlate Threat with Runtime.</div>
+            </a>
+        </div>
+        <div class="flex-item">
+            <div class="vertical-box head">Logs</div>
+              <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">SL-001</span><br/> Capture realtime security logs and events.</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">SL-002</span><br/> Historical data storage.</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">SL-003</span><br/> Setup alerting rules on logs.</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">SL-004</span><br/> Enrichment with threat intel.</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">SL-005</span><br/> Check PIIs or Card data leakage in logs for PCI-DSS.</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">SL-006</span><br/> Store HTTP Ingress Logs.</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">SL-007</span><br/> Store Sysdig Falco Events.</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">SL-008</span><br/> Store WAF events.</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">SL-009</span><br/> Store Cloud activity logs like CloudTrail.</div>
+        </a>
+        </div>
 
-      <div class="flex-item">
-        <div class="vertical-box head">Kubernetes</div>
-        <div class="vertical-box"> <span class="blue-head">KS-001</span><br/> Scan for misconfigurations.</div>
-        <div class="vertical-box"> <span class="blue-head">KS-002</span><br/> Scan for secrets exposed.</div>
-        <div class="vertical-box"> <span class="blue-head">KS-003</span><br/> Generate KBOM and SBOM, scan it for vulnerabilities.</div>
-        <div class="vertical-box"> <span class="blue-head">KS-004</span><br/> Enable runtime security protection:.</div>
-        <div class="vertical-box"> <span class="blue-head">KS-005</span><br/> Analyze permissive RBAC rules .</div>
-        <div class="vertical-box"> <span class="blue-head">KS-006</span><br/> Perform Penetration testing on Cluster.</div>
-        <div class="vertical-box"> <span class="blue-head">KS-007</span><br/> Continuous Compliance for the Cluster.</div>
-        <div class="vertical-box"> <span class="blue-head">KS-008</span><br/> Watch events.</div>
-        <div class="vertical-box"> <span class="blue-head">KS-009</span><br/> Enable Audit and API server logging.</div>
-        <div class="vertical-box"> <span class="blue-head">KS-010</span><br/> Scan IaC like Helm Charts.</div>
-        <div class="vertical-box"> <span class="blue-head">KS-011</span><br/> CIS Benchmarking for Docker images.</div>
-        <div class="vertical-box"> <span class="blue-head">KS-012</span><br/> Scanning private registry.</div>
-        <div class="vertical-box"> <span class="blue-head">KS-012</span><br/> Monitor kubernetes attack paths.</div>
-      </div>
-      <div class="flex-item">
-        <div class="vertical-box head">Threat</div>
-           <div class="vertical-box"> <span class="blue-head">TI-001</span><br/> Configure Threat Intel sources for the organisation.</div>
-           <div class="vertical-box"> <span class="blue-head">TI-002</span><br/> Correlate Threat with Runtime.</div>
-      </div>
-      <div class="flex-item">
-        <div class="vertical-box head">Logs</div>
-           <div class="vertical-box"> <span class="blue-head">SL-001</span><br/> Capture realtime security logs and events.</div>
-           <div class="vertical-box"> <span class="blue-head">SL-002</span><br/> Historical data storage.</div>
-           <div class="vertical-box"> <span class="blue-head">SL-003</span><br/> Setup alerting rules on logs.</div>
-           <div class="vertical-box"> <span class="blue-head">SL-004</span><br/> Enrichment with threat intel.</div>
-           <div class="vertical-box"> <span class="blue-head">SL-005</span><br/> Check PIIs or Card data leakage in logs for PCI-DSS.</div>
-           <div class="vertical-box"> <span class="blue-head">SL-006</span><br/> Store HTTP Ingress Logs.</div>
-           <div class="vertical-box"> <span class="blue-head">SL-007</span><br/> Store Sysdig Falco Events.</div>
-           <div class="vertical-box"> <span class="blue-head">SL-008</span><br/> Store WAF events.</div>
-           <div class="vertical-box"> <span class="blue-head">SL-009</span><br/> Store Cloud activity logs like CloudTrail.</div>
-      </div>
 
 
-
-      <div class="flex-item">
-        <div class="vertical-box head">Incident</div>
-           <div class="vertical-box"> <span class="blue-head">IM-001</span><br/> Manage Security Tickets.</div>
-           <div class="vertical-box"> <span class="blue-head">IM-002</span><br/> Configure Alerting.</div>
-      </div>
+        <div class="flex-item">
+            <div class="vertical-box head">Incident</div>
+          <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">IM-001</span><br/> Manage Security Tickets.</div>
+        </a>    <a class="button-trigger"  data-id="1"   data-bs-toggle="popover" data-placement="right" href="#">
+            <div class="vertical-box"> <span class="blue-head">IM-002</span><br/> Configure Alerting.</div>
+        </a>
+        </div>
     </div>
-  </div>
+</div>
 
 <!-- Bootstrap Bundle with Popper.js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -252,43 +336,360 @@
         // YAML data containing button information
         var buttonDataYAML = `
 buttonData:
-  button1:
-    id: INV-001
-    title: List IP addresses.
-    description: |-
-        This control involves compiling a comprehensive list of all IP addresses that are associated with
-        your organization's network infrastructure. This includes both internal and external
-        IP addresses used for various purposes such as servers, devices, and network endpoints.
+    - control: INV-001
+      description: List IP Addresses that belong to your organization.
+      purpose: This control involves listing all IP addresses that belong to the organization's network infrastructure. Maintaining an inventory of IP addresses helps organizations track assets, monitor network activity, and identify potential security vulnerabilities or unauthorized devices.
+      categories:
+        - Assets Inventory
+        - Network Security
+      recommendations:
+        - Regularly update the inventory of IP addresses to reflect changes in the network infrastructure.
+        - Implement automated network scanning tools to discover and catalog IP addresses across the organization's environment.
+      incidents:
+        - description: Unauthorized access to network resources due to undocumented IP addresses.
+          reference: https://example.com/unauthorized-access-undocumented-ips
 
-    purpose: |-
-        Maintaining an up-to-date inventory of IP addresses helps organizations understand the scope of their
-        network infrastructure, identify potential security risks or vulnerabilities,
-        and facilitate effective network management and monitoring.
-    depends:
-    tags:
-      - network
-  button2:
-    id: INV-002
-    title: Update Inventory
-    description: Update the inventory data based on latest inputs.
-    code: |-
-      # This is a bash script
-      echo "Hello, world!"
-    depends: INV-006
-    tags:
-      - tag3
-      - tag4
-  button3:
-    id: INV-003
-    title: Inspect Inventory
-    description: Inspect the inventory assets for any discrepancies.
-    code: |-
-      print("This is Python code")
-      print("It can have multiple lines")
-    depends: ""
-    tags:
-      - tag5
-      - tag6
+
+    - control: INV-002
+      description: List all Domains and Subdomains.
+      purpose: This control involves listing all domains and subdomains associated with the organization's online presence. Maintaining a comprehensive inventory of domains helps organizations manage their digital assets, track domain ownership, and monitor for unauthorized domain registrations or DNS changes.
+      categories:
+        - Assets Inventory
+        - Domain Management
+      recommendations:
+        - Use domain registration and DNS management tools to centralize domain inventory and track domain ownership information.
+        - Implement domain monitoring services to detect unauthorized domain registrations or DNS changes.
+      incidents:
+        - description: Phishing attacks leveraging unauthorized domains similar to the organization's brand.
+          reference: https://example.com/phishing-attacks-unauthorized-domains
+
+    - control: INV-003
+      description: List DNS records primarily MX and CNAMEs.
+      purpose: This control involves listing DNS records, focusing on mail exchange (MX) and canonical name (CNAME) records. Maintaining an inventory of DNS records helps organizations manage DNS configurations, troubleshoot network issues, and prevent DNS-related security incidents such as DNS spoofing or domain hijacking.
+      categories:
+        - Assets Inventory
+        - DNS Management
+      recommendations:
+        - Implement automated DNS record discovery tools to maintain an up-to-date inventory of DNS configurations.
+        - Regularly review and audit DNS records to ensure accuracy and integrity.
+      incidents:
+        - description: DNS spoofing attack exploiting outdated or misconfigured MX or CNAME records.
+          reference: https://example.com/dns-spoofing-mx-cname
+
+    - control: INV-004
+      description: Add your Github Repositories.
+      purpose: This control involves adding the organization's GitHub repositories to the inventory. Maintaining a centralized repository inventory helps organizations manage source code, track repository access, and enforce security policies to protect sensitive code assets.
+      categories:
+        - Assets Inventory
+        - Source Code Management
+      recommendations:
+        - Integrate GitHub repository management with organizational identity and access management (IAM) systems to enforce access controls and permissions.
+        - Implement repository scanning tools to detect and remediate security vulnerabilities in GitHub repositories.
+      incidents:
+        - description: Unauthorized access to sensitive code repositories due to lack of repository inventory.
+          reference: https://example.com/unauthorized-access-github-repos
+
+    - control: INV-005
+      description: Add your Bitbucket Repositories.
+      purpose: This control involves adding the organization's Bitbucket repositories to the inventory. Maintaining a centralized repository inventory helps organizations manage source code, track repository access, and enforce security policies to protect sensitive code assets.
+      categories:
+        - Assets Inventory
+        - Source Code Management
+      recommendations:
+        - Integrate Bitbucket repository management with organizational identity and access management (IAM) systems to enforce access controls and permissions.
+        - Implement repository scanning tools to detect and remediate security vulnerabilities in Bitbucket repositories.
+      incidents:
+        - description: Unauthorized access to sensitive code repositories due to lack of repository inventory.
+          reference: https://example.com/unauthorized-access-bitbucket-repos
+
+    - control: INV-006
+      description: Add your Gitlab Repositories.
+      purpose: This control involves adding the organization's GitLab repositories to the inventory. Maintaining a centralized repository inventory helps organizations manage source code, track repository access, and enforce security policies to protect sensitive code assets.
+      categories:
+        - Assets Inventory
+        - Source Code Management
+      recommendations:
+        - Integrate GitLab repository management with organizational identity and access management (IAM) systems to enforce access controls and permissions.
+        - Implement repository scanning tools to detect and remediate security vulnerabilities in GitLab repositories.
+      incidents:
+        - description: Unauthorized access to sensitive code repositories due to lack of repository inventory.
+          reference: https://example.com/unauthorized-access-gitlab-repos
+
+    - control: INV-007
+      description: List your AWS accounts.
+      purpose: This control involves listing all AWS accounts associated with the organization. Maintaining an inventory of AWS accounts helps organizations track cloud resources, manage access permissions, and enforce security policies to prevent unauthorized account usage or resource misconfigurations.
+      categories:
+        - Assets Inventory
+        - Cloud Management
+      recommendations:
+        - Implement centralized identity and access management (IAM) solutions
+    - control: INV-008
+      description: List all the endpoints of the organization (Linux, Mac, Windows).
+      purpose: This control involves maintaining a comprehensive inventory of all endpoints (devices) within the organization, including those running on Linux, macOS, and Windows operating systems. By documenting all endpoints, organizations can improve visibility, monitor device health, and enforce security policies to mitigate the risk of unauthorized access, malware infections, and data breaches.
+      categories:
+        - Inventory Management
+        - Endpoint Security
+      recommendations:
+        - Implement automated discovery tools and network scanners to identify and catalog all endpoints connected to the organization's network.
+        - Maintain an inventory database or asset management system to record detailed information about each endpoint, including device type, operating system, hardware specifications, and network configuration.
+        - Deploy endpoint security solutions and endpoint detection and response (EDR) tools to monitor endpoint activity, detect anomalous behavior, and respond to security incidents in real-time.
+        - Establish a patch management process to ensure timely deployment of security updates and patches to endpoints, addressing known vulnerabilities and reducing the risk of exploitation.
+        - Enforce access controls and least privilege principles to restrict unauthorized access to endpoints and sensitive data, mitigating the risk of insider threats and unauthorized activities.
+      incidents:
+        - description: Unauthorized access to endpoints can lead to data breaches, ransomware attacks, and financial losses for organizations, highlighting the importance of endpoint security and asset management.
+          reference: https://www.cisa.gov/endpoint-security-best-practices
+        - description: Malware infections on endpoints can disrupt business operations, compromise sensitive information, and damage the organization's reputation, necessitating robust endpoint protection and monitoring solutions.
+          reference: https://www.ibm.com/security/data-breach/endpoint-threats
+
+
+
+    - control: CS-001
+      description: Check 2FA on Github.
+      purpose: This control involves checking the availability of two-factor authentication (2FA) on the GitHub repository. Enabling 2FA adds an additional layer of security to user accounts and helps prevent unauthorized access and account compromise.
+      categories:
+        - Code Security
+        - Authentication
+      recommendations:
+        - Enable two-factor authentication (2FA) on the GitHub repository to enhance account security.
+        - Encourage all users to enable 2FA for their GitHub accounts to protect against unauthorized access.
+      incidents:
+        - description: Unauthorized access to GitHub repositories due to lack of two-factor authentication.
+          reference: https://www.darkreading.com/vulnerabilities-threats/researchers-identify-670-solarwinds-victims/d/d-id/1339981
+
+    - control: CS-002
+      description: Check Branch Protection configuration on Github.
+      purpose: This control involves checking the configuration of branch protection on the GitHub repository. Enabling branch protection ensures that specific rules and restrictions are applied to branches, such as requiring code reviews and status checks before merging changes.
+      categories:
+        - Code Security
+        - Access Control
+      recommendations:
+        - Enable branch protection on critical branches to enforce code review and status check requirements.
+        - Configure branch protection settings to prevent force pushes and deletions on protected branches.
+      incidents:
+        - description: Unauthorized modifications to protected branches due to insufficient branch protection.
+          reference: https://www.darkreading.com/vulnerabilities-threats/researchers-identify-670-solarwinds-victims/d/d-id/1339981
+
+    - control: CS-003
+      description: Scan Code for Hard Coded Secrets.
+      purpose: This control involves scanning the source code for hard-coded secrets, such as API keys, passwords, and tokens. Identifying and removing hard-coded secrets helps mitigate the risk of unauthorized access and data breaches.
+      categories:
+        - Code Security
+        - Secrets Management
+      recommendations:
+        - Implement secure coding practices to avoid hard-coding sensitive information in source code.
+        - Utilize environment variables or secure vaults to manage and protect sensitive credentials.
+      incidents:
+        - description: Data breach caused by exposure of hard-coded API keys in source code.
+          reference: https://www.darkreading.com/vulnerabilities-threats/researchers-identify-670-solarwinds-victims/d/d-id/1339981
+
+    - control: CS-004
+      description: Deep Scan code for leakage in commit history.
+      purpose: This control involves performing a deep scan of the code repository to identify any leakage in commit history. Analyzing commit history helps detect sensitive information, code changes, and potential security vulnerabilities that may have been unintentionally exposed.
+      categories:
+        - Code Security
+        - Vulnerability Management
+      recommendations:
+        - Regularly review commit history for unintended exposure of sensitive information or credentials.
+        - Implement access controls and permissions to restrict access to sensitive data in commit logs.
+      incidents:
+        - description: Exposure of sensitive data in commit history leading to a security incident.
+          reference: https://www.darkreading.com/vulnerabilities-threats/researchers-identify-670-solarwinds-victims/d/d-id/1339981
+
+    - control: CS-005
+      description: Software Component Analysis (SCA) for dependencies.
+      purpose: This control involves conducting software component analysis (SCA) to identify and manage dependencies used in the codebase. SCA helps detect and remediate vulnerabilities in third-party libraries and frameworks, reducing the risk of security breaches due to insecure dependencies.
+      categories:
+        - Code Security
+        - Dependency Management
+      recommendations:
+        - Regularly update and patch dependencies to mitigate known vulnerabilities.
+        - Implement automated dependency scanning tools to identify and remediate security issues in third-party libraries.
+      incidents:
+        - description: Exploitation of known vulnerabilities in outdated third-party dependencies.
+          reference: https://www.darkreading.com/vulnerabilities-threats/researchers-identify-670-solarwinds-victims/d/d-id/1339981
+
+    - control: CS-006
+      description: Generate SBOM of the repo.
+      purpose: This control involves generating a software bill of materials (SBOM) for the code repository, documenting all software components and dependencies used in the application. SBOM provides visibility into the software supply chain and facilitates vulnerability management and compliance efforts.
+      categories:
+        - Code Security
+        - Inventory Management
+      recommendations:
+        - Utilize automated tools to generate and maintain an up-to-date software bill of materials (SBOM) for the code repository.
+        - Integrate SBOM generation into the software development lifecycle to ensure continuous visibility into software components and dependencies.
+      incidents:
+        - description: Lack of visibility into software components leading to delayed vulnerability remediation.
+          reference: https://www.darkreading.com/vulnerabilities-threats/researchers-identify-670-solarwinds-victims/d/d-id/1339981
+
+    - control: CS-007
+      description: Scan Code for Security Vulnerabilities like SQL Injection, RCE, XSS, etc.
+      purpose: This control involves scanning the codebase for security vulnerabilities such as SQL injection, remote code execution (RCE), cross-site scripting (XSS), and other common attack vectors. By proactively identifying and addressing security flaws in the code, organizations can mitigate the risk of exploitation and unauthorized access.
+      categories:
+        - Code Security
+        - Vulnerability Management
+      recommendations:
+        - Implement automated static code analysis (SCA) tools to scan the codebase for security vulnerabilities on a regular basis.
+        - Configure scanning tools to detect common security issues such as SQL injection, RCE, XSS, and insecure cryptographic implementations.
+      incidents:
+        - description: Unsanitized user input leading to SQL injection attack.
+          reference: https://www.darkreading.com/vulnerabilities-threats/researchers-identify-670-solarwinds-victims/d/d-id/1339981
+
+    - control: CI-001
+      description: SAST scan on every PR requests.
+      purpose: This control involves conducting static application security testing (SAST) on every pull request (PR) submitted to the code repository. SAST helps identify security vulnerabilities and coding errors early in the development process, enabling timely remediation and risk reduction.
+      categories:
+        - CI/CD
+        - Static Analysis
+      recommendations:
+        - Integrate SAST tools into the CI/CD pipeline to automatically scan code changes in pull requests.
+        - Configure SAST tools to provide actionable feedback to developers for vulnerability remediation.
+      incidents:
+        - description: Security vulnerabilities introduced through code changes in pull requests.
+          reference: https://example.com/sast-pull-request-vulnerabilities
+
+    - control: CI-002
+      description: DAST on OpenAPI specifications with every code change.
+      purpose: This control involves performing dynamic application security testing (DAST) on OpenAPI specifications with every code change. DAST helps identify security vulnerabilities and misconfigurations in RESTful APIs defined by OpenAPI specifications, ensuring the security and integrity of API endpoints.
+      categories:
+        - CI/CD
+        - Dynamic Analysis
+      recommendations:
+        - Integrate DAST tools with CI/CD pipelines to automatically scan OpenAPI specifications for security vulnerabilities.
+        - Configure DAST tools to simulate real-world attacks and assess the security posture of API endpoints.
+      incidents:
+        - description: Exploitable security vulnerabilities discovered in API endpoints defined by OpenAPI specifications.
+          reference: https://example.com/dast-openapi-vulnerabilities
+
+    - control: CI-003
+      description: DAST scan on Postman collections on code changes.
+      purpose: This control involves conducting dynamic application security testing (DAST) on Postman collections with every code change. DAST helps identify security vulnerabilities and weaknesses in RESTful APIs defined by Postman collections, enabling proactive vulnerability management and risk mitigation.
+      categories:
+        - CI/CD
+        - Dynamic Analysis
+      recommendations:
+        - Integrate DAST tools with CI/CD pipelines to automatically scan Postman collections for security vulnerabilities.
+        - Configure DAST tools to authenticate and interact with API endpoints defined in Postman collections during testing.
+      incidents:
+        - description: Critical security vulnerabilities identified in API endpoints defined by Postman collections.
+          reference: https://example.com/dast-postman-vulnerabilities
+
+    - control: CI-004
+      description: IaC scan for cloud configurations.
+      purpose: This control involves performing infrastructure as code (IaC) scans for cloud configurations to identify security misconfigurations and compliance violations. IaC scans help ensure the integrity and security of cloud environments by detecting and remediating configuration drift, unauthorized changes, and insecure settings.
+      categories:
+        - CI/CD
+        - Infrastructure as Code (IaC)
+      recommendations:
+        - Integrate IaC scanning tools with CI/CD pipelines to automatically assess cloud configurations for security compliance.
+        - Implement policy as code (PaC) frameworks to enforce security policies and best practices for cloud infrastructure provisioning.
+      incidents:
+        - description: Security misconfigurations in cloud environments leading to data breaches or service disruptions.
+          reference: https://example.com/iac-cloud-security-incidents
+
+    - control: CI-005
+      description: IaC scan for Kubernetes Configurations.
+      purpose: This control involves performing infrastructure as code (IaC) scans for Kubernetes configurations to identify security vulnerabilities and misconfigurations. IaC scans help ensure the security and compliance of Kubernetes clusters by detecting and remediating configuration errors, access controls, and pod security policies.
+      categories:
+        - CI/CD
+        - Kubernetes Security
+      recommendations:
+        - Integrate IaC scanning tools with CI/CD pipelines to automatically assess Kubernetes configurations for security compliance.
+        - Implement automated remediation workflows to address security findings and enforce Kubernetes security best practices.
+      incidents:
+        - description: Kubernetes misconfigurations leading to unauthorized access, data breaches, or container escapes.
+          reference: https://example.com/iac-kubernetes-security-incidents
+
+    - control: CI-006
+      description: Run MobSF for mobile application Codes.
+      purpose: This control involves running Mobile Security Framework (MobSF) scans on mobile application codebases to identify security vulnerabilities and weaknesses. MobSF scans help ensure the security and resilience of mobile applications by detecting and remediating common security issues, including insecure data storage, insecure communication, and insecure coding practices.
+      categories:
+        - CI/CD
+        - Mobile Security
+      recommendations:
+        - Integrate MobSF scanning into CI/CD pipelines to automatically assess mobile application codebases for security vulnerabilities.
+        - Configure MobSF scans to analyze mobile app binaries, source code, and third-party dependencies for security flaws.
+      incidents:
+        - description: Security vulnerabilities discovered in mobile applications leading to privacy violations or data breaches.
+          reference: https://example.com/mobsf-mobile-security-incidents
+    - control: AP-001
+      description: Network Port Scan for All IP Assets
+      purpose: This control involves conducting network port scans to identify and assess all IP assets within the organization's network infrastructure. By performing comprehensive port scans, organizations can identify open ports, services, and potential security vulnerabilities, allowing them to implement appropriate security measures and safeguard against unauthorized access and cyber attacks.
+      categories:
+        - Network Security
+        - Vulnerability Management
+      recommendations:
+        - Conduct regular network port scans using automated scanning tools to identify and assess all IP assets within the organization's network infrastructure.
+        - Implement access controls and firewall rules to restrict access to unnecessary ports and services, minimizing the attack surface and reducing the risk of unauthorized access and exploitation.
+      incidents:
+        - description: Unauthorized access to open ports leading to a security breach.
+          reference: https://www.darkreading.com/attacks-breaches/10-notable-security-breaches-of-2021/d/d-id/1359480
+
+    - control: AP-002
+      description: Enable Perimeter Security
+      purpose: This control involves implementing perimeter security measures to protect the organization's network infrastructure from external threats and unauthorized access. By establishing strong perimeter defenses, organizations can detect and prevent malicious activities, intrusions, and unauthorized access attempts, safeguarding critical assets and data from cyber attacks and security breaches.
+      categories:
+        - Network Security
+        - Access Control
+      recommendations:
+        - Deploy firewalls, intrusion detection/prevention systems (IDS/IPS), and web application firewalls (WAFs) to establish a secure perimeter around the organization's network infrastructure.
+        - Configure perimeter security devices to monitor and filter incoming and outgoing network traffic, blocking malicious activities and unauthorized access attempts.
+      incidents:
+        - description: External cyber attack targeting the organization's network perimeter.
+          reference: https://www.securityweek.com/analysis-shows-average-cost-enterprise-data-breach-surpasses-4-million
+
+    - control: AP-003
+      description: Run ZAP Scan on OpenAPI Specifications
+      purpose: This control involves running a ZAP (Zed Attack Proxy) scan on OpenAPI specifications to identify security vulnerabilities and weaknesses in API endpoints and web services. By conducting ZAP scans on OpenAPI specifications, organizations can identify and remediate security flaws, such as injection attacks, broken authentication, and sensitive data exposure, enhancing the security posture of their APIs and web applications.
+      categories:
+        - Application Security
+        - API Security
+      recommendations:
+        - Integrate ZAP scanning into the API development lifecycle to assess the security of OpenAPI specifications during development and testing phases.
+        - Configure ZAP scans to evaluate API endpoints for common security vulnerabilities, such as SQL injection, XSS, CSRF, and insecure deserialization.
+      incidents:
+        - description: API endpoint vulnerability exploited by attackers to gain unauthorized access.
+          reference: https://www.darkreading.com/vulnerabilities-threats/api-security-issues-what-you-need-to-know/d/d-id/1340958
+
+    - control: AP-004
+      description: Run ZAP Scan on Postman Collections
+      purpose: This control involves running a ZAP (Zed Attack Proxy) scan on Postman collections to identify security vulnerabilities and weaknesses in API requests and responses. By conducting ZAP scans on Postman collections, organizations can detect and remediate security flaws, such as injection attacks, broken authentication, and insecure communication, ensuring the security and integrity of their APIs and web services.
+      categories:
+        - Application Security
+        - API Security
+      recommendations:
+        - Integrate ZAP scanning into the API development lifecycle to assess the security of Postman collections during development and testing phases.
+        - Configure ZAP scans to evaluate API requests and responses for common security vulnerabilities, such as SQL injection, XSS, CSRF, and insecure communication protocols.
+      incidents:
+        - description: API request vulnerability exploited by attackers to manipulate data or execute unauthorized actions.
+          reference: https://www.darkreading.com/cloud/flaws-in-code-hosting-tools-put-dev-teams-at-risk/d/d-id/1341255
+
+    - control: AP-005
+      description: Deep Authenticated ZAP Scan for Running Applications
+      purpose: This control involves conducting deep authenticated ZAP (Zed Attack Proxy) scans for running applications to identify security vulnerabilities and weaknesses in web applications and APIs. By performing deep authenticated ZAP scans, organizations can assess the security posture of their applications, detect vulnerabilities, and remediate security flaws to enhance their resilience against cyber threats and attacks.
+      categories:
+        - Application Security
+        - Web Application Security
+      recommendations:
+        - Configure ZAP scanning tools to perform deep authenticated scans for running applications, simulating authenticated user sessions and interactions to identify security vulnerabilities.
+        - Establish processes for prioritizing and remediating security findings identified during deep authenticated ZAP scans, addressing critical vulnerabilities and security weaknesses promptly.
+      incidents:
+        - description: Authentication bypass vulnerability exploited by attackers to gain unauthorized access to sensitive data or functionality.
+          reference: https://www.darkreading.com/vulnerabilities-threats/how-developers-can-meet-modern-application-security-challenges/a/d-id/1339751
+
+    - control: AP-006
+      description: Enable Dynamic Scanning on Mobile Applications
+      purpose: This control involves enabling dynamic application security testing (DAST) on mobile applications to identify and mitigate security vulnerabilities and weaknesses. By conducting dynamic scans on mobile applications, organizations can assess the security posture of their mobile apps, detect vulnerabilities, and remediate security flaws to enhance their resilience against cyber attacks and threats.
+      categories:
+        - Application Security
+        - Mobile Security
+      recommendations:
+        - Integrate dynamic application security testing (DAST) tools specifically designed for mobile applications into the mobile app development lifecycle.
+        - Configure DAST tools to perform automated scans of mobile applications, including both Android and iOS platforms, to detect security vulnerabilities and weaknesses.
+      incidents:
+        - description: Vulnerability in mobile application exploited by attackers to compromise user devices or steal sensitive information.
+          reference: https://www.darkreading.com/mobile-security/mobile-security-in-the-workplace-5-key-trends-to-watch/a/d-id/1340992
+
+
 `;
 
         // Parse YAML data to get buttonData object
@@ -297,20 +698,22 @@ buttonData:
 
         // Add click event listener to buttons with class 'button-trigger'
         $('.button-trigger').click(function(e) {
+           $(".isOpen").popover('hide');
             e.preventDefault(); // Prevent default link behavior
             var placement = $(this).data('placement');
             // Get data for the clicked button
-            var buttonId = $(this).index(); // Index starts from 0
-            var data = buttonData['button' + buttonId];
+            var buttonId = $(this).data("id"); // Index starts from 0
+            var data = buttonData[buttonId-1];
+            console.log(buttonId, data)
             // Set popover content
             var popoverContent = '<div>' +
-                 '<h5 class="popover-title">' + data.id + ' ' + data.title + '</h5>' +
+                 '<h5 class="popover-title">' + data.control + ' ' + data.description + '</h5>' +
                 '<p class="popover-content">' + data.description + '</p>' +
                 '<p class="popover-content"><span class="purpose">Purpose:</span><br/>' + data.purpose + '</p>' +
                 (data.code ? '<pre class="code">' + data.code + '</pre>' : '') +
                 (data.depends ? '<p class="popover-content"><strong>Related:</strong> <span class="depends-on">' + data.depends + '</span></p>' : '') +
                 '<p class="popover-content">' +
-                data.tags.map(tag => '<span class="tag">' + tag + '</span>').join('') + '</p></div>';
+                data.categories.map(cat => '<span class="tag">' + cat + '</span>').join('') + '</p></div>';
 
             // Open popover corresponding to the clicked button
             $(this).popover({
@@ -320,14 +723,12 @@ buttonData:
                 placement: placement // Set placement based on button data-placement attribute
             });
             $(this).popover('toggle');
+            $(this).addClass('isOpen');
         });
 
-        // Close popover when clicked outside
+
         $(document).on('click', function (e) {
-            if ($(e.target).data('bs-toggle') !== 'popover'
-                && $(e.target).parents('.popover.in').length === 0) {
-                $('[data-bs-toggle="popover"]').popover('hide');
-            }
+             $(".isOpen").popover('hide');
         });
     });
 </script>

@@ -9,7 +9,7 @@
     - Encourage all users to enable 2FA for their GitHub accounts to protect against unauthorized access.
   incidents:
     - description: Unauthorized access to GitHub repositories due to lack of two-factor authentication.
-      reference: https://example.com/unauthorized-access-github
+      reference: https://www.darkreading.com/vulnerabilities-threats/researchers-identify-670-solarwinds-victims/d/d-id/1339981
 
 - control: CS-002
   description: Check Branch Protection configuration on Github.
@@ -22,7 +22,7 @@
     - Configure branch protection settings to prevent force pushes and deletions on protected branches.
   incidents:
     - description: Unauthorized modifications to protected branches due to insufficient branch protection.
-      reference: https://example.com/unauthorized-modifications-github
+      reference: https://www.darkreading.com/vulnerabilities-threats/researchers-identify-670-solarwinds-victims/d/d-id/1339981
 
 - control: CS-003
   description: Scan Code for Hard Coded Secrets.
@@ -35,7 +35,7 @@
     - Utilize environment variables or secure vaults to manage and protect sensitive credentials.
   incidents:
     - description: Data breach caused by exposure of hard-coded API keys in source code.
-      reference: https://example.com/data-breach-hard-coded-secrets
+      reference: https://www.darkreading.com/vulnerabilities-threats/researchers-identify-670-solarwinds-victims/d/d-id/1339981
 
 - control: CS-004
   description: Deep Scan code for leakage in commit history.
@@ -48,7 +48,7 @@
     - Implement access controls and permissions to restrict access to sensitive data in commit logs.
   incidents:
     - description: Exposure of sensitive data in commit history leading to a security incident.
-      reference: https://example.com/sensitive-data-exposure-commit-history
+      reference: https://www.darkreading.com/vulnerabilities-threats/researchers-identify-670-solarwinds-victims/d/d-id/1339981
 
 - control: CS-005
   description: Software Component Analysis (SCA) for dependencies.
@@ -61,7 +61,7 @@
     - Implement automated dependency scanning tools to identify and remediate security issues in third-party libraries.
   incidents:
     - description: Exploitation of known vulnerabilities in outdated third-party dependencies.
-      reference: https://example.com/vulnerability-exploitation-third-party-deps
+      reference: https://www.darkreading.com/vulnerabilities-threats/researchers-identify-670-solarwinds-victims/d/d-id/1339981
 
 - control: CS-006
   description: Generate SBOM of the repo.
@@ -74,4 +74,17 @@
     - Integrate SBOM generation into the software development lifecycle to ensure continuous visibility into software components and dependencies.
   incidents:
     - description: Lack of visibility into software components leading to delayed vulnerability remediation.
-      reference: https://example.com/software-component-visibility-lack
+      reference: https://www.darkreading.com/vulnerabilities-threats/researchers-identify-670-solarwinds-victims/d/d-id/1339981
+
+- control: CS-007
+  description: Scan Code for Security Vulnerabilities like SQL Injection, RCE, XSS, etc.
+  purpose: This control involves scanning the codebase for security vulnerabilities such as SQL injection, remote code execution (RCE), cross-site scripting (XSS), and other common attack vectors. By proactively identifying and addressing security flaws in the code, organizations can mitigate the risk of exploitation and unauthorized access.
+  categories:
+    - Code Security
+    - Vulnerability Management
+  recommendations:
+    - Implement automated static code analysis (SCA) tools to scan the codebase for security vulnerabilities on a regular basis.
+    - Configure scanning tools to detect common security issues such as SQL injection, RCE, XSS, and insecure cryptographic implementations.
+  incidents:
+    - description: Unsanitized user input leading to SQL injection attack.
+      reference: https://www.darkreading.com/vulnerabilities-threats/researchers-identify-670-solarwinds-victims/d/d-id/1339981
